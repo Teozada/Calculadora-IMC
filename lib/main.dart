@@ -26,7 +26,8 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
-      body: Column(
+      body: SingleChildScrollView(
+        child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Icon(Icons.person, size: 120.0, color: Color(0xFF77dd77)),
@@ -45,9 +46,20 @@ class _HomeState extends State<Home> {
                 labelStyle: TextStyle(color: Color(0xFF77dd77))),
             textAlign: TextAlign.center,
             style: TextStyle(color: Color(0xFF77dd77), fontSize: 30.0),
-          )
+          ),
+         Container(
+           height: 60.0,
+           child:  RaisedButton( onPressed: () {},
+          child: Text('Calcular', style: TextStyle(color: Colors.white, fontSize: 30.0),),
+          color: Color(0xFF77dd77),
+          ),
+         ),
+         Text('Info',
+         textAlign: TextAlign.center,
+         style: TextStyle(color: Color(0xFF77dd77),fontSize: 25.0),)
         ],
       ),
+      )
     );
   }
 }
